@@ -6,7 +6,6 @@
 // But instead we're going to implement it from scratch:
 var getElementsByClassName = function(className) {
   var result = [];
-  loopdocument(document.body);
   var loopdocument = function(item) {
     if (item.classList && item.classList.contains(className)) {
       result.push(item);
@@ -16,5 +15,6 @@ var getElementsByClassName = function(className) {
     });
     return result;
   };
+  loopdocument(document.body);
   return result;
 };
